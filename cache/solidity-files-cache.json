@@ -475,6 +475,78 @@
       "artifacts": [
         "VulnerableTxOrigin"
       ]
+    },
+    "/workspaces/solidity-security-lab/contracts/front-running/SafeGame.sol": {
+      "lastModificationDate": 1771161687870,
+      "contentHash": "74ce6774be7e34c56451d2b899b28a7c",
+      "sourceName": "contracts/front-running/SafeGame.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeGame"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/front-running/VulnerableGame.sol": {
+      "lastModificationDate": 1771161656660,
+      "contentHash": "58b78a828c50b55d12a88b86d9bdc686",
+      "sourceName": "contracts/front-running/VulnerableGame.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "VulnerableGame"
+      ]
     }
   }
 }

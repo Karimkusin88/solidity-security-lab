@@ -1,28 +1,28 @@
 # Solidity Security Lab
 
-A hands-on playground for learning and demonstrating common smart contract vulnerabilities and their secure implementations.
-
-Built using Hardhat.
+Hands-on playground to learn and demonstrate common smart contract vulnerabilities + secure fixes.  
+Built with **Hardhat** and fully covered by automated tests.
 
 ---
 
-## 🔐 Covered Vulnerabilities
+## ✅ Vulnerabilities Covered
 
-### 1️⃣ Reentrancy
-- VulnerableBankV2
-- SafeBankV2
-- ReentrancyAttackerV2
-- Demonstrates state update after external call issue
+### 1) Reentrancy (V2 stable)
+- `VulnerableBankV2` → drain via reentrancy
+- `SafeBankV2` → fixed with Checks-Effects-Interactions
+- `ReentrancyAttackerV2` → exploit contract
 
-### 2️⃣ Access Control
-- VulnerableVault
-- SafeVault (Ownable)
-- Demonstrates ownership hijacking
+### 2) Access Control Hijack
+- `VulnerableVault` → attacker can take ownership
+- `SafeVault` → fixed with `Ownable`
 
-### 3️⃣ tx.origin Authentication Flaw
-- VulnerableTxOrigin
-- SafeTxOrigin
-- Demonstrates phishing-style contract exploitation
+### 3) tx.origin Authentication Flaw
+- `VulnerableTxOrigin` → phishing-style exploit
+- `SafeTxOrigin` → fixed by using `msg.sender`
+
+### 4) Front-Running (Commit-Reveal)
+- `VulnerableGame` → guess exposed (copycat risk)
+- `SafeGame` → commit-reveal protection
 
 ---
 

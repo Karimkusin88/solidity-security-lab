@@ -26,6 +26,14 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.VulnerableVault__factory>;
     getContractFactory(
+      name: "SafeGame",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.SafeGame__factory>;
+    getContractFactory(
+      name: "VulnerableGame",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.VulnerableGame__factory>;
+    getContractFactory(
       name: "IVulnerableBank",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IVulnerableBank__factory>;
@@ -90,6 +98,16 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.VulnerableVault>;
     getContractAt(
+      name: "SafeGame",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.SafeGame>;
+    getContractAt(
+      name: "VulnerableGame",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.VulnerableGame>;
+    getContractAt(
       name: "IVulnerableBank",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -163,6 +181,14 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.VulnerableVault>;
     deployContract(
+      name: "SafeGame",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.SafeGame>;
+    deployContract(
+      name: "VulnerableGame",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.VulnerableGame>;
+    deployContract(
       name: "IVulnerableBank",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IVulnerableBank>;
@@ -226,6 +252,16 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.VulnerableVault>;
+    deployContract(
+      name: "SafeGame",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.SafeGame>;
+    deployContract(
+      name: "VulnerableGame",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.VulnerableGame>;
     deployContract(
       name: "IVulnerableBank",
       args: any[],

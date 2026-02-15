@@ -3,6 +3,8 @@
 /* eslint-disable */
 import type * as accessControl from "./access-control";
 export type { accessControl };
+import type * as frontRunning from "./front-running";
+export type { frontRunning };
 import type * as reentrancy from "./reentrancy";
 export type { reentrancy };
 import type * as txOrigin from "./tx-origin";
