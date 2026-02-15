@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SafeBank {
+    mapping(address => uint256) public balances;
+
+    function deposit() external payable {
+        balances[msg.sender] += msg.value;
+    }
+
+    function withdraw(uint256 amount) external {
+        require(balances[msg.sender] >= amount, "insufficient");
+
+        // ✅ FIX: Checks-Effects-Interactions (update state first)
+        balances[msg.sender] -= amount;
+
+        (bool ok,) = msg.sender.call{value: amount}("");
+        require(ok, "send failed");
+    }
+
+    function bankBalance() external view returns (uint256) {
+        return address(this).balance;
+    }
+}

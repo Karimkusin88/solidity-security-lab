@@ -1,0 +1,480 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/workspaces/solidity-security-lab/contracts/reentrancy/ReentrancyAttacker.sol": {
+      "lastModificationDate": 1771159705745,
+      "contentHash": "3312a3b01bb70dd4f93728e08ea7195e",
+      "sourceName": "contracts/reentrancy/ReentrancyAttacker.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IVulnerableBank",
+        "ReentrancyAttacker"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/reentrancy/SafeBank.sol": {
+      "lastModificationDate": 1771158543432,
+      "contentHash": "df4bcf8a7ecb2f08045aaa1954d3b4ea",
+      "sourceName": "contracts/reentrancy/SafeBank.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeBank"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/reentrancy/VulnerableBank.sol": {
+      "lastModificationDate": 1771159436340,
+      "contentHash": "ba7d406e457c939610a081a49e66705b",
+      "sourceName": "contracts/reentrancy/VulnerableBank.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "VulnerableBank"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/reentrancy/ReentrancyAttackerV2.sol": {
+      "lastModificationDate": 1771160046024,
+      "contentHash": "da39f275049bb3ca3ef7f752f63915cb",
+      "sourceName": "contracts/reentrancy/ReentrancyAttackerV2.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IVulnerableBankV2",
+        "ReentrancyAttackerV2"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/reentrancy/SafeBankV2.sol": {
+      "lastModificationDate": 1771160020469,
+      "contentHash": "2e5d2a18150bee8e20a864e3bad7cddc",
+      "sourceName": "contracts/reentrancy/SafeBankV2.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeBankV2"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/reentrancy/VulnerableBankV2.sol": {
+      "lastModificationDate": 1771159986679,
+      "contentHash": "01a797ea43bf9bd9f458e158804010ee",
+      "sourceName": "contracts/reentrancy/VulnerableBankV2.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "VulnerableBankV2"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/access-control/SafeVault.sol": {
+      "lastModificationDate": 1771160201095,
+      "contentHash": "59e91fd8f1c57855e1673571e1fe2c65",
+      "sourceName": "contracts/access-control/SafeVault.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeVault"
+      ]
+    },
+    "/workspaces/solidity-security-lab/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1771160218103,
+      "contentHash": "d3c790edc9ccf808a17c5a6cd13614fd",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/workspaces/solidity-security-lab/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1771160217945,
+      "contentHash": "67bfbc07588eb8683b3fd8f6f909563e",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/access-control/VulnerableVault.sol": {
+      "lastModificationDate": 1771160174483,
+      "contentHash": "c3d2b1d805035c4dfc1743d9cf4b5f31",
+      "sourceName": "contracts/access-control/VulnerableVault.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "VulnerableVault"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/tx-origin/SafeTxOrigin.sol": {
+      "lastModificationDate": 1771160501310,
+      "contentHash": "a9b49e4229353e42fa1a0195437d8fad",
+      "sourceName": "contracts/tx-origin/SafeTxOrigin.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeTxOrigin"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/tx-origin/TxOriginAttacker.sol": {
+      "lastModificationDate": 1771160470162,
+      "contentHash": "9c4a56955ff1213dc4cd67aa4657db2a",
+      "sourceName": "contracts/tx-origin/TxOriginAttacker.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "IVulnerable",
+        "TxOriginAttacker"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/tx-origin/VulnerableTxOrigin.sol": {
+      "lastModificationDate": 1771160438661,
+      "contentHash": "0a52f025408159e791ba59146af9974f",
+      "sourceName": "contracts/tx-origin/VulnerableTxOrigin.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "VulnerableTxOrigin"
+      ]
+    }
+  }
+}
