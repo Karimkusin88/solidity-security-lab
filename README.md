@@ -32,3 +32,36 @@ Built with **Hardhat** and fully covered by automated tests.
 npm install
 npx hardhat compile
 npx hardhat test
+## 🎯 Purpose
+
+This lab is designed to:
+
+- Understand how vulnerabilities are exploited
+- Implement secure patterns
+- Validate fixes through automated tests
+- Learn how security tooling detects issues
+
+---
+
+## 🏆 Community Recognition
+
+This Security Lab received engagement from the **Wake Framework** team —  
+a Solidity-focused security tooling framework.
+
+The lab was built to simulate and validate:
+
+- Real-world reentrancy exploits
+- Ownership hijacking patterns
+- tx.origin phishing attacks
+- Front-running vulnerabilities (commit-reveal protection)
+
+Wake's interaction indicates that the vulnerability simulations
+align with practical security tooling and detection standards.
+
+This project aims to bridge the gap between:
+- Learning exploits
+- Writing secure smart contracts
+- Understanding automated vulnerability detection
+
+---
+
