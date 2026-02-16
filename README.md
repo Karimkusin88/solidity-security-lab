@@ -1,67 +1,189 @@
-# Solidity Security Lab
+# 🛡️ Solidity Security Lab
 
-Hands-on playground to learn and demonstrate common smart contract vulnerabilities + secure fixes.  
-Built with **Hardhat** and fully covered by automated tests.
+Hands-on playground to learn, simulate, and fix real-world smart contract vulnerabilities.
+
+Built with **Hardhat**, fully covered by automated tests, and structured to demonstrate both exploitation and mitigation patterns.
+
+---
+
+## 🎯 Purpose
+
+This lab is designed to:
+
+- Understand how vulnerabilities are exploited in real EVM environments
+- Implement secure smart contract patterns
+- Validate fixes through automated tests
+- Learn how security tooling detects issues
+- Build a practical security engineering portfolio
+
+This is not just theory — each vulnerability includes:
+- A vulnerable contract
+- An exploit contract (when applicable)
+- A secure implementation
+- A passing test suite validating the fix
 
 ---
 
 ## ✅ Vulnerabilities Covered
 
-### 1) Reentrancy (V2 stable)
-- `VulnerableBankV2` → drain via reentrancy
-- `SafeBankV2` → fixed with Checks-Effects-Interactions
-- `ReentrancyAttackerV2` → exploit contract
+### 1️⃣ Reentrancy (Drain Attack Simulation)
 
-### 2) Access Control Hijack
-- `VulnerableVault` → attacker can take ownership
-- `SafeVault` → fixed with `Ownable`
+**Contracts:**
+- `VulnerableBankV2`
+- `ReentrancyAttackerV2`
+- `SafeBankV2`
 
-### 3) tx.origin Authentication Flaw
-- `VulnerableTxOrigin` → phishing-style exploit
-- `SafeTxOrigin` → fixed by using `msg.sender`
+**Concept:**
+- External call before state update
+- Recursive withdrawal exploit
+- Checks-Effects-Interactions pattern
 
-### 4) Front-Running (Commit-Reveal)
-- `VulnerableGame` → guess exposed (copycat risk)
-- `SafeGame` → commit-reveal protection
+**Fix:**
+- State updated before external call
+- Proper withdrawal ordering
 
 ---
 
-## 🧪 Run Locally
+### 2️⃣ Access Control Hijack
+
+**Contracts:**
+- `VulnerableVault`
+- `SafeVault`
+
+**Concept:**
+- Missing access control
+- Ownership takeover risk
+
+**Fix:**
+- `Ownable`
+- Restricted privileged functions
+
+---
+
+### 3️⃣ tx.origin Authentication Flaw
+
+**Contracts:**
+- `VulnerableTxOrigin`
+- `SafeTxOrigin`
+
+**Concept:**
+- Phishing-style contract attack
+- `tx.origin` misuse
+
+**Fix:**
+- Replace `tx.origin` with `msg.sender`
+- Strict caller validation
+
+---
+
+### 4️⃣ Front-Running (Commit-Reveal Pattern)
+
+**Contracts:**
+- `VulnerableGame`
+- `SafeGame`
+
+**Concept:**
+- Public guess visibility
+- Transaction ordering manipulation
+
+**Fix:**
+- Commit-reveal scheme
+- Hash-based commitment
+
+---
+
+## 🧪 Testing Strategy
+
+All vulnerabilities are validated through automated Hardhat tests:
+
+- Exploit succeeds on vulnerable contract
+- Exploit fails on secure implementation
+- State integrity is verified
+- Edge cases covered
+
+Run locally:
 
 ```bash
 npm install
 npx hardhat compile
 npx hardhat test
-## 🎯 Purpose
 
-This lab is designed to:
+🏗 Architecture Overview
+contracts/
+ ├── access-control/
+ ├── reentrancy/
+ ├── tx-origin/
+ └── frontrunning/
 
-- Understand how vulnerabilities are exploited
-- Implement secure patterns
-- Validate fixes through automated tests
-- Learn how security tooling detects issues
+test/
+ ├── access-control.test.js
+ ├── reentrancy.test.js
+ ├── txorigin.test.js
+ └── frontrunning.test.js
 
----
+Each vulnerability follows a consistent structure:
 
-## 🏆 Community Recognition
+Vulnerable implementation
 
-This Security Lab received engagement from the **Wake Framework** team —  
+Safe implementation
+
+Exploit simulation
+
+Test verification
+
+🏆 Community Recognition
+
+This project received engagement from the Wake Framework team,
 a Solidity-focused security tooling framework.
 
-The lab was built to simulate and validate:
+The lab simulates patterns that automated security tools detect in real audits, including:
 
-- Real-world reentrancy exploits
-- Ownership hijacking patterns
-- tx.origin phishing attacks
-- Front-running vulnerabilities (commit-reveal protection)
+Reentrancy vulnerabilities
 
-Wake's interaction indicates that the vulnerability simulations
-align with practical security tooling and detection standards.
+Privilege escalation
 
-This project aims to bridge the gap between:
-- Learning exploits
-- Writing secure smart contracts
-- Understanding automated vulnerability detection
+tx.origin misuse
 
----
+Front-running risk
 
+This demonstrates alignment with practical security tooling standards.
+
+🧠 What This Demonstrates
+
+Deep understanding of EVM execution flow
+
+Exploit-driven learning approach
+
+Secure contract architecture design
+
+Testing discipline
+
+Security engineering mindset
+
+🚀 Why This Matters
+
+Smart contract security is not optional.
+
+Small architectural decisions can result in:
+
+Fund drainage
+
+Ownership hijack
+
+Phishing attacks
+
+Economic manipulation
+
+Understanding both exploitation and mitigation is critical for:
+
+DeFi development
+
+Smart contract auditing
+
+Protocol engineering
+
+Security research
+
+📜 License
+
+MIT
