@@ -54,3 +54,7 @@ npx hardhat test test/front-running/front-running.test.js
 Expected:
 - VulnerableGame allows copycat attack
 - SafeGame protects with commit-reveal
+
+## Expected Wake findings
+- Vulnerable variants may be flagged depending on detector coverage (expected).
+- Safe variant should demonstrate commit-reveal and avoid revealing secrets in the same tx.

@@ -55,3 +55,6 @@ Expected:
 - Vulnerable contract can be exploited
 - Safe contract res
 
+## Expected Wake findings
+- `tx-origin` on `VulnerableTxOrigin` is expected (intentional).
+- `SafeTxOrigin` should not use `tx.origin` for authorization.

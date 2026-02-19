@@ -31,6 +31,14 @@ This is not just theory — each vulnerability includes:
 - [Access Control](docs/access-control.md)
 - [Front-Running](docs/front-running.md)
 
+## Modules
+
+| Module | What you learn | Guide | Test |
+|---|---|---|---|
+| Reentrancy | Checks-Effects-Interactions, reentrancy patterns | [docs/reentrancy.md](docs/reentrancy.md) | `npx hardhat test test/reentrancy/reentrancy.test.js` |
+| tx.origin | Why tx.origin auth is dangerous, phishing flow | [docs/tx-origin.md](docs/tx-origin.md) | `npx hardhat test test/tx-origin/tx-origin.test.js` |
+| Access Control | Ownership/roles, hijack patterns | [docs/access-control.md](docs/access-control.md) | `npx hardhat test test/access-control/access-control.test.js` |
+| Front-Running | Mempool copycats, commit-reveal | [docs/front-running.md](docs/front-running.md) | `npx hardhat test test/front-running/front-running.test.js` |
 
 ---
 

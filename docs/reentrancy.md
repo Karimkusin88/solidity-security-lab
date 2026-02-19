@@ -29,4 +29,8 @@ Run:
 ```bash
 npx hardhat test test/reentrancy/reentrancy.test.js
 
+## Expected Wake findings
+- `reentrancy` on `VulnerableBank*` is expected (intentional).
+- `SafeBank*` should not trigger the reentrancy detector.
+
 MD

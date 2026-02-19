@@ -44,3 +44,6 @@ Run:
 ```bash
 npx hardhat test test/access-control/access-control.test.js
 
+## Expected Wake findings
+- Vulnerable variants may trigger access control / auth-related smells (expected).
+- Safe variants should enforce authorization consistently (owner/roles).
