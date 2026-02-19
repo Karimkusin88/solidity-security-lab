@@ -59,6 +59,13 @@ All modules are validated via Hardhat tests:
 npm install
 npx hardhat test
 
+```md
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Security
+See [SECURITY.md](SECURITY.md)
+
 🏗 Project Structure
 contracts/
  ├── access-control/
