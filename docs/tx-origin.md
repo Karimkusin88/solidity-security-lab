@@ -58,3 +58,7 @@ Expected:
 ## Expected Wake findings
 - `tx-origin` on `VulnerableTxOrigin` is expected (intentional).
 - `SafeTxOrigin` should not use `tx.origin` for authorization.
+
+## Expected Wake findings
+- `tx-origin` on `VulnerableTxOrigin` is expected (intentional).
+- `SafeTxOrigin` should not use `tx.origin` for authorization.

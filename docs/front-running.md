@@ -58,3 +58,7 @@ Expected:
 ## Expected Wake findings
 - Vulnerable variants may be flagged depending on detector coverage (expected).
 - Safe variant should demonstrate commit-reveal and avoid revealing secrets in the same tx.
+
+## Expected Wake findings
+- Vulnerable variants may be flagged depending on detector coverage (expected).
+- Safe variant should demonstrate commit-reveal and avoid revealing secrets in the same tx.
