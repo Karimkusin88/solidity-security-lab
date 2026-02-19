@@ -49,6 +49,13 @@ Each module includes:
 | Front-Running | Commit-reveal anti-MEV | docs/front-running.md |
 | Delegatecall | Proxy storage takeover | docs/delegatecall.md |
 
+```md
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Security
+See [SECURITY.md](SECURITY.md)
+
 ---
 
 ## 🧪 Testing
@@ -58,13 +65,6 @@ All modules are validated via Hardhat tests:
 ```bash
 npm install
 npx hardhat test
-
-```md
-## Contributing
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Security
-See [SECURITY.md](SECURITY.md)
 
 🏗 Project Structure
 contracts/
