@@ -1,0 +1,9 @@
+
+
+  Oracle Manipulation Lab (AMM spot price)
+    ✔ VulnerableLending: attacker manipulates spot price and borrows more (491ms)
+    ✔ SafeLending: blocks borrowing using a fresh snapshot after manipulation
+
+
+  2 passing (522ms)
+

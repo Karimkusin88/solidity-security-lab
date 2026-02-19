@@ -23,3 +23,6 @@ Using AMM **spot price** as an oracle is dangerous. Attackers can manipulate res
 ```bash
 npx hardhat test test/oracle-manipulation/oracle-manipulation.test.js
 
+## Expected Wake findings
+- Vulnerable oracle patterns may trigger oracle-related or economic-risk heuristics (tool coverage varies).
+- Safe variant should prevent same-window update-and-borrow flows.

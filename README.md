@@ -49,7 +49,7 @@ Each module includes:
 | Front-Running | Commit-reveal anti-MEV | docs/front-running.md |
 | Delegatecall | Proxy storage takeover | docs/delegatecall.md |
 | Oracle | Spot price manipulation | docs/oracle.md |
-| Oracle Manipulation | Spot price attack | docs/oracle-manipulation.md | `npx hardhat test test/oracle-manipulation/oracle-manipulation.test.js`
+| Oracle Manipulation | Spot price attack | docs/oracle-manipulation.md | npx hardhat test test/oracle-manipulation/oracle-manipulation.test.js|
 
 ```md
 ## Contributing
