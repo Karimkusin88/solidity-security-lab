@@ -95,3 +95,12 @@ MIT
 Notes:
 - Static analysis findings are expected on intentionally vulnerable contracts.
 - CI is configured to keep runs green while still publishing analysis output as artifacts.
+
+
+if ! grep -q "## Roadmap" README.md; then
+cat <<'EOF' >> README.md
+
+## Roadmap
+See [ROADMAP.md](ROADMAP.md)
+EOF
+fi
