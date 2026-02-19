@@ -1,213 +1,76 @@
-![CI](../../actions/workflows/ci.yml/badge.svg)
-![Wake](../../actions/workflows/wake.yml/badge.svg)
+![CI](https://github.com/Karimkusin88/solidity-security-lab/actions/workflows/ci.yml/badge.svg)
+![Wake](https://github.com/Karimkusin88/solidity-security-lab/actions/workflows/wake.yml/badge.svg)
 
 # 🛡️ Solidity Security Lab
 
-Hands-on playground to learn, simulate, and fix real-world smart contract vulnerabilities.
+Hands-on playground to simulate, exploit, and fix real-world smart contract vulnerabilities.
 
-Built with **Hardhat**, fully covered by automated tests, and structured to demonstrate both exploitation and mitigation patterns.
+Built with **Hardhat**, validated with automated tests, and analyzed using **Wake static analysis**.
 
 ---
 
 ## 🎯 Purpose
 
-This lab is designed to:
+This repository demonstrates practical smart contract security engineering by:
 
-- Understand how vulnerabilities are exploited in real EVM environments
-- Implement secure smart contract patterns
-- Validate fixes through automated tests
-- Learn how security tooling detects issues
-- Build a practical security engineering portfolio
+- Reproducing real exploit patterns
+- Implementing secure mitigations
+- Validating fixes with automated tests
+- Running static analysis in CI
+- Structuring vulnerabilities in a consistent lab format
 
-This is not just theory — each vulnerability includes:
-- A vulnerable contract
-- An exploit contract (when applicable)
-- A secure implementation
-- A passing test suite validating the fix
+Each module includes:
+- Vulnerable implementation
+- Secure implementation
+- Exploit simulation
+- Automated test verification
 
-## Lab Guides
+---
+
+## 📚 Lab Guides
+
 - [Reentrancy](docs/reentrancy.md)
 - [tx.origin](docs/tx-origin.md)
 - [Access Control](docs/access-control.md)
 - [Front-Running](docs/front-running.md)
-
-## Modules
-
-| Module | What you learn | Guide | Test |
-|---|---|---|---|
-| Reentrancy | Checks-Effects-Interactions, reentrancy patterns | [docs/reentrancy.md](docs/reentrancy.md) | `npx hardhat test test/reentrancy/reentrancy.test.js` |
-| tx.origin | Why tx.origin auth is dangerous, phishing flow | [docs/tx-origin.md](docs/tx-origin.md) | `npx hardhat test test/tx-origin/tx-origin.test.js` |
-| Access Control | Ownership/roles, hijack patterns | [docs/access-control.md](docs/access-control.md) | `npx hardhat test test/access-control/access-control.test.js` |
-| Front-Running | Mempool copycats, commit-reveal | [docs/front-running.md](docs/front-running.md) | `npx hardhat test test/front-running/front-running.test.js` |
+- Delegatecall Takeover (advanced)
 
 ---
 
-## ✅ Vulnerabilities Covered
+## 📦 Modules
 
-### 1️⃣ Reentrancy (Drain Attack Simulation)
-
-**Contracts:**
-- `VulnerableBankV2`
-- `ReentrancyAttackerV2`
-- `SafeBankV2`
-
-**Concept:**
-- External call before state update
-- Recursive withdrawal exploit
-- Checks-Effects-Interactions pattern
-
-**Fix:**
-- State updated before external call
-- Proper withdrawal ordering
+| Module | Key Concept | Guide |
+|---|---|---|
+| Reentrancy | Checks-Effects-Interactions | docs/reentrancy.md |
+| tx.origin | Phishing-style auth flaw | docs/tx-origin.md |
+| Access Control | Ownership hijack patterns | docs/access-control.md |
+| Front-Running | Commit-reveal anti-MEV | docs/front-running.md |
+| Delegatecall | Proxy storage takeover | docs/delegatecall.md |
 
 ---
 
-### 2️⃣ Access Control Hijack
+## 🧪 Testing
 
-**Contracts:**
-- `VulnerableVault`
-- `SafeVault`
-
-**Concept:**
-- Missing access control
-- Ownership takeover risk
-
-**Fix:**
-- `Ownable`
-- Restricted privileged functions
-
----
-
-### 3️⃣ tx.origin Authentication Flaw
-
-**Contracts:**
-- `VulnerableTxOrigin`
-- `SafeTxOrigin`
-
-**Concept:**
-- Phishing-style contract attack
-- `tx.origin` misuse
-
-**Fix:**
-- Replace `tx.origin` with `msg.sender`
-- Strict caller validation
-
----
-
-### 4️⃣ Front-Running (Commit-Reveal Pattern)
-
-**Contracts:**
-- `VulnerableGame`
-- `SafeGame`
-
-**Concept:**
-- Public guess visibility
-- Transaction ordering manipulation
-
-**Fix:**
-- Commit-reveal scheme
-- Hash-based commitment
-
----
-
-## 🧪 Testing Strategy
-
-All vulnerabilities are validated through automated Hardhat tests:
-
-- Exploit succeeds on vulnerable contract
-- Exploit fails on secure implementation
-- State integrity is verified
-- Edge cases covered
-
-## Security Tooling
-- ✅ Unit tests (Hardhat)
-- ✅ CI (GitHub Actions)
-- ✅ Static analysis (Wake)
-Artifacts: Wake output is uploaded on every run.
-
-Run locally:
+All modules are validated via Hardhat tests:
 
 ```bash
 npm install
-npx hardhat compile
 npx hardhat test
 
-🏗 Architecture Overview
+🏗 Project Structure
 contracts/
  ├── access-control/
  ├── reentrancy/
  ├── tx-origin/
- └── frontrunning/
+ ├── front-running/
+ └── delegatecall/
 
 test/
- ├── access-control.test.js
- ├── reentrancy.test.js
- ├── txorigin.test.js
- └── frontrunning.test.js
-
-
-Each vulnerability follows a consistent structure:
-
-Vulnerable implementation
-
-Safe implementation
-
-Exploit simulation
-
-Test verification
-
-🏆 Community Recognition
-
-This project received engagement from the Wake Framework team,
-a Solidity-focused security tooling framework.
-
-The lab simulates patterns that automated security tools detect in real audits, including:
-
-Reentrancy vulnerabilities
-
-Privilege escalation
-
-tx.origin misuse
-
-Front-running risk
-
-This demonstrates alignment with practical security tooling standards.
-
-🧠 What This Demonstrates
-
-Deep understanding of EVM execution flow
-
-Exploit-driven learning approach
-
-Secure contract architecture design
-
-Testing discipline
-
-Security engineering mindset
-
-🚀 Why This Matters
-
-Smart contract security is not optional.
-
-Small architectural decisions can result in:
-
-Fund drainage
-
-Ownership hijack
-
-Phishing attacks
-
-Economic manipulation
-
-Understanding both exploitation and mitigation is critical for:
-
-DeFi development
-
-Smart contract auditing
-
-Protocol engineering
-
-Security research
+ ├── access-control/
+ ├── reentrancy/
+ ├── tx-origin/
+ ├── front-running/
+ └── delegatecall/
 
 📜 License
 

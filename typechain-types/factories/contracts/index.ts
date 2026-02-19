@@ -2,6 +2,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export * as accessControl from "./access-control";
+export * as delegatecall from "./delegatecall";
 export * as frontRunning from "./front-running";
 export * as reentrancy from "./reentrancy";
 export * as txOrigin from "./tx-origin";

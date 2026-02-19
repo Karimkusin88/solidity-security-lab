@@ -26,6 +26,18 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.VulnerableVault__factory>;
     getContractFactory(
+      name: "ProxyAttacker",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ProxyAttacker__factory>;
+    getContractFactory(
+      name: "SafeProxy",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.SafeProxy__factory>;
+    getContractFactory(
+      name: "VulnerableProxy",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.VulnerableProxy__factory>;
+    getContractFactory(
       name: "SafeGame",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.SafeGame__factory>;
@@ -98,6 +110,21 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.VulnerableVault>;
     getContractAt(
+      name: "ProxyAttacker",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ProxyAttacker>;
+    getContractAt(
+      name: "SafeProxy",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.SafeProxy>;
+    getContractAt(
+      name: "VulnerableProxy",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.VulnerableProxy>;
+    getContractAt(
       name: "SafeGame",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -181,6 +208,18 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.VulnerableVault>;
     deployContract(
+      name: "ProxyAttacker",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ProxyAttacker>;
+    deployContract(
+      name: "SafeProxy",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.SafeProxy>;
+    deployContract(
+      name: "VulnerableProxy",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.VulnerableProxy>;
+    deployContract(
       name: "SafeGame",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.SafeGame>;
@@ -252,6 +291,21 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.VulnerableVault>;
+    deployContract(
+      name: "ProxyAttacker",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ProxyAttacker>;
+    deployContract(
+      name: "SafeProxy",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.SafeProxy>;
+    deployContract(
+      name: "VulnerableProxy",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.VulnerableProxy>;
     deployContract(
       name: "SafeGame",
       args: any[],

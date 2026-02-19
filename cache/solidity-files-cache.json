@@ -547,6 +547,114 @@
       "artifacts": [
         "VulnerableGame"
       ]
+    },
+    "/workspaces/solidity-security-lab/contracts/delegatecall/ProxyAttacker.sol": {
+      "lastModificationDate": 1771523857691,
+      "contentHash": "ebc04ec988eba166b631c860350ff7c2",
+      "sourceName": "contracts/delegatecall/ProxyAttacker.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "ProxyAttacker"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/delegatecall/SafeProxy.sol": {
+      "lastModificationDate": 1771523667428,
+      "contentHash": "2865b354ec2b1cb22425eb2871815fd4",
+      "sourceName": "contracts/delegatecall/SafeProxy.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "SafeProxy"
+      ]
+    },
+    "/workspaces/solidity-security-lab/contracts/delegatecall/VulnerableProxy.sol": {
+      "lastModificationDate": 1771523667347,
+      "contentHash": "f63034f69849652784905d74937063cc",
+      "sourceName": "contracts/delegatecall/VulnerableProxy.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "VulnerableProxy"
+      ]
     }
   }
 }
