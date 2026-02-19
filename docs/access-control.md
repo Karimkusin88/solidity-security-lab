@@ -1,7 +1,6 @@
 # Access Control Lab
 
 ## What is the issue?
-
 Access control bugs happen when privileged actions can be executed by unauthorized users due to:
 - missing checks (no `onlyOwner`)
 - incorrect modifiers / role logic
@@ -13,14 +12,12 @@ These issues often lead to full takeover (ownership hijack) or fund loss.
 ---
 
 ## Where in this repo
-
-- Contracts: contracts/access-control/*
-- Tests: test/access-control/access-control.test.js
+- Contracts: `contracts/access-control/*`
+- Tests: `test/access-control/access-control.test.js`
 
 ---
 
 ## How the exploit works (high level)
-
 Common takeover flow:
 1. Contract exposes a privileged function (e.g., setOwner / transferOwnership / withdraw).
 2. The function lacks proper access control.
@@ -30,10 +27,9 @@ Common takeover flow:
 ---
 
 ## Fix
-
 Use proven patterns:
-- OpenZeppelin Ownable
-- OpenZeppelin AccessControl (roles)
+- OpenZeppelin `Ownable`
+- OpenZeppelin `AccessControl` (roles)
 
 Checklist:
 - Owner/admin set only once (constructor or initializer)
@@ -44,13 +40,7 @@ Checklist:
 ---
 
 ## Proof
-
 Run:
-
 ```bash
 npx hardhat test test/access-control/access-control.test.js
-```
 
-Expected:
-- Vulnerable vault can be hijacked
-- Safe vault prevents ownership hijack
