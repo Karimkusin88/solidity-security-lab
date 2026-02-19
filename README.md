@@ -1,5 +1,6 @@
 ![CI](https://github.com/Karimkusin88/solidity-security-lab/actions/workflows/ci.yml/badge.svg)
 ![Wake](https://github.com/Karimkusin88/solidity-security-lab/actions/workflows/wake.yml/badge.svg)
+![Slither](https://github.com/Karimkusin88/solidity-security-lab/actions/workflows/slither.yml/badge.svg)
 
 # 🛡️ Solidity Security Lab
 

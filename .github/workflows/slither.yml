@@ -1,0 +1,50 @@
+name: Slither (static analysis)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  slither:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Node deps
+        run: npm ci
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Slither
+        run: |
+          python -m pip install --upgrade pip
+          pip install slither-analyzer
+
+      - name: Install solc (via solc-select)
+        run: |
+          pip install solc-select
+          solc-select install 0.8.20
+          solc-select use 0.8.20
+
+      - name: Run Slither (non-blocking)
+        run: |
+          set +e
+          slither . --print human-summary 2>&1 | tee slither-output.txt
+          echo "Slither exit code: $?"
+          exit 0
+
+      - name: Upload Slither output
+        uses: actions/upload-artifact@v4
+        with:
+          name: slither-output
+          path: slither-output.txt
+          if-no-files-found: warn
