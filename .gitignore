@@ -1,3 +1,8 @@
 artifacts/
-cache/
 typechain-types/
+node_modules/
+cache/
+artifacts/
+typechain-types/
+.wake/
+screenshots/*.txt
