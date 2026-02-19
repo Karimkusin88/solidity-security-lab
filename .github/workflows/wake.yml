@@ -1,10 +1,33 @@
+name: Wake (static analysis)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Wake
+        run: pip install eth-wake
+
       - name: Run Wake detectors (non-blocking)
         run: |
-          wake detect all || true
+          set +e
+          wake detect all 2>&1 | tee wake-output.txt
+          echo "Wake exit code: $?"
+          exit 0
 
-      - name: Upload Wake outputs
+      - name: Upload Wake output
         uses: actions/upload-artifact@v4
         with:
           name: wake-output
-          path: .wake/
+          path: wake-output.txt
           if-no-files-found: warn
