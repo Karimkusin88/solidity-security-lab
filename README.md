@@ -48,6 +48,7 @@ Each module includes:
 | Access Control | Ownership hijack patterns | docs/access-control.md |
 | Front-Running | Commit-reveal anti-MEV | docs/front-running.md |
 | Delegatecall | Proxy storage takeover | docs/delegatecall.md |
+| Oracle | Spot price manipulation | docs/oracle.md |
 
 ```md
 ## Contributing
