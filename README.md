@@ -84,3 +84,14 @@ test/
 📜 License
 
 MIT
+## Tooling Matrix
+
+| Tool | Purpose | Runs in CI | Output |
+|---|---|---:|---|
+| Hardhat tests | Prove exploits + verify fixes | ✅ | GitHub Actions logs |
+| Wake | Static analysis (Solidity-focused detectors) | ✅ | Artifact: `wake-output` |
+| Slither | Static analysis (broad analyzer) | ✅ | Artifact: `slither-output` |
+
+Notes:
+- Static analysis findings are expected on intentionally vulnerable contracts.
+- CI is configured to keep runs green while still publishing analysis output as artifacts.
