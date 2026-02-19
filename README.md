@@ -36,6 +36,7 @@ Each module includes:
 - [Front-Running](docs/front-running.md)
 - [Delegatecall Takeover](docs/delegatecall.md)
 - [Oracle Manipulation](docs/oracle-manipulation.md)
+- [Signature Replay](docs/signature-replay.md)
 
 ---
 
@@ -50,6 +51,10 @@ Each module includes:
 | Delegatecall | Proxy storage takeover | docs/delegatecall.md |
 | Oracle | Spot price manipulation | docs/oracle.md |
 | Oracle Manipulation | Spot price attack | docs/oracle-manipulation.md | npx hardhat test test/oracle-manipulation/oracle-manipulation.test.js|
+- Signature Replay | ECDSA replay risk | docs/signature-replay.md | `npx hardhat test test/signature-replay/signature-replay.test.js` |
+
+---
+
 
 ```md
 ## Contributing
@@ -98,9 +103,6 @@ Notes:
 - Static analysis findings are expected on intentionally vulnerable contracts.
 - CI is configured to keep runs green while still publishing analysis output as artifacts.
 
-
-if ! grep -q "## Roadmap" README.md; then
-cat <<'EOF' >> README.md
 
 ## Roadmap
 See [ROADMAP.md](ROADMAP.md)
