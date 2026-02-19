@@ -1,22 +1,14 @@
 {
   "name": "solidity-security-lab",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Hands-on playground to learn, simulate, and fix real-world smart contract vulnerabilities (Hardhat + tests).",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:gas": "REPORT_GAS=true hardhat test",
+    "clean": "hardhat clean"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Karimkusin88/solidity-security-lab.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Karimkusin88/solidity-security-lab/issues"
-  },
-  "homepage": "https://github.com/Karimkusin88/solidity-security-lab#readme",
   "devDependencies": {
     "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",

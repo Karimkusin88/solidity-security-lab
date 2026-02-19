@@ -1,1 +1,3 @@
-np
+artifacts/
+cache/
+typechain-types/
