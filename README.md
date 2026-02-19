@@ -38,6 +38,7 @@ Each module includes:
 - [Oracle Manipulation](docs/oracle-manipulation.md)
 - [Signature Replay](docs/signature-replay.md)
 - [ERC20 Approve Race](docs/erc20-approve-race.md)
+- [Storage Collision](docs/storage-collision.md)
 
 ---
 
@@ -54,6 +55,7 @@ Each module includes:
 | Oracle Manipulation | Spot price attack | docs/oracle-manipulation.md | npx hardhat test test/oracle-manipulation/oracle-manipulation.test.js|
 | Signature Replay | ECDSA replay risk | docs/signature-replay.md | `npx hardhat test test/signature-replay/signature-replay.test.js` |
 | ERC20 Approve Race | Allowance front-run risk | docs/erc20-approve-race.md | `npx hardhat test test/erc20-pitfalls/approve-race.test.js`|
+| Storage Collision | Upgradeable layout corruption | docs/storage-collision.md | `npx hardhat test test/storage-collision/storage-collision.test.js`|
 
 ---
 
