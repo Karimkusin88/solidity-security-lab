@@ -1,0 +1,25 @@
+
+
+  Access Control Lab
+    ✔ VulnerableVault can be hijacked (747ms)
+    ✔ SafeVault prevents ownership hijack
+
+  Delegatecall Lab
+    ✔ VulnerableProxy can be taken over via delegatecall
+    ✔ SafeProxy prevents unauthorized implementation changes
+
+  Front-Running Lab
+    ✔ VulnerableGame allows copycat attack
+    ✔ SafeGame protects with commit-reveal
+
+  Reentrancy Lab (V2 stable)
+    ✔ VulnerableBankV2 can be drained via reentrancy
+    ✔ SafeBankV2 resists reentrancy
+
+  tx.origin Lab
+    ✔ Vulnerable contract can be exploited
+    ✔ Safe contract resists tx.origin exploit
+
+
+  10 passing (923ms)
+

@@ -1,0 +1,68 @@
+[18:34:33] Found 16 *.sol files in 0.18 s                                                                                                                             detect.py:729
+[18:34:34] Loaded previous build in 0.06 s                                                                                                                          compiler.py:869
+WARNING  2026-02-19 18:34:34,168 wake.svm.svm: Failed to download solc list from https://binaries.soliditylang.org/linux-amd64/list.json: HTTP Error 403: Forbidden      svm.py:308
+           Compiled 3 files using 3 solc runs in 0.30 s                                                                                                            compiler.py:1249
+           Processed compilation results in 0.07 s                                                                                                                 compiler.py:1502
+[18:34:35] Wrote build artifacts in 0.05 s                                                                                                                         compiler.py:1629
+
+
+╭─ [HIGH][MEDIUM] Possible reentrancy in `VulnerableBank.withdraw(uint256)` [reentrancy] ─╮
+│   12         require(balances[msg.sender] >= amount, "insufficient");                   │
+│   13                                                                                    │
+│   14         // ❌ Vulnerable: external call before state update                        │
+│ ❱ 15         (bool ok,) = msg.sender.call{value: amount}("");                           │
+│   16         ok; // biar ga warning, dan kita sengaja ga revert                         │
+│   17                                                                                    │
+│   18         balances[msg.sender] -= amount;                                            │
+╰─ contracts/reentrancy/VulnerableBank.sol ───────────────────────────────────────────────╯
+└── ╭─ Exploitable from `VulnerableBank.withdraw(uint256)` ─────────────────╮
+    │   12         require(balances[msg.sender] >= amount, "insufficient"); │
+    │   13                                                                  │
+    │   14         // ❌ Vulnerable: external call before state update      │
+    │ ❱ 15         (bool ok,) = msg.sender.call{value: amount}("");         │
+    │   16         ok; // biar ga warning, dan kita sengaja ga revert       │
+    │   17                                                                  │
+    │   18         balances[msg.sender] -= amount;                          │
+    ╰─ contracts/reentrancy/VulnerableBank.sol ─────────────────────────────╯
+
+
+╭─ [HIGH][MEDIUM] Possible reentrancy in `VulnerableBankV2.withdrawAll()` [reentrancy] ─╮
+│   13         require(amount > 0, "no balance");                                       │
+│   14                                                                                  │
+│   15         // ❌ Vulnerable: interaction first                                      │
+│ ❱ 16         (bool ok,) = msg.sender.call{value: amount}("");                         │
+│   17         require(ok, "send failed");                                              │
+│   18                                                                                  │
+│   19         // effects later                                                         │
+╰─ contracts/reentrancy/VulnerableBankV2.sol ───────────────────────────────────────────╯
+└── ╭─ Exploitable from `VulnerableBankV2.withdrawAll()` ───────────╮
+    │   13         require(amount > 0, "no balance");               │
+    │   14                                                          │
+    │   15         // ❌ Vulnerable: interaction first              │
+    │ ❱ 16         (bool ok,) = msg.sender.call{value: amount}(""); │
+    │   17         require(ok, "send failed");                      │
+    │   18                                                          │
+    │   19         // effects later                                 │
+    ╰─ contracts/reentrancy/VulnerableBankV2.sol ───────────────────╯
+
+
+╭─ [MEDIUM][LOW] Unsafe usage of tx.origin [tx-origin] ─────────────╮
+│   10                                                              │
+│   11     // ❌ WRONG: using tx.origin                             │
+│   12     function withdrawAll() external {                        │
+│ ❱ 13         require(tx.origin == owner, "not owner");            │
+│   14         payable(msg.sender).transfer(address(this).balance); │
+│   15     }                                                        │
+│   16                                                              │
+╰─ contracts/tx-origin/VulnerableTxOrigin.sol ──────────────────────╯
+
+
+╭─ [WARNING][LOW] Use of tx.origin may interfere with ERC-4337 account abstraction [tx-origin] ─╮
+│   10                                                                                          │
+│   11     // ❌ WRONG: using tx.origin                                                         │
+│   12     function withdrawAll() external {                                                    │
+│ ❱ 13         require(tx.origin == owner, "not owner");                                        │
+│   14         payable(msg.sender).transfer(address(this).balance);                             │
+│   15     }                                                                                    │
+│   16                                                                                          │
+╰─ contracts/tx-origin/VulnerableTxOrigin.sol ──────────────────────────────────────────────────╯
