@@ -25,13 +25,12 @@ This is not just theory — each vulnerability includes:
 - A secure implementation
 - A passing test suite validating the fix
 
-```md
 ## Lab Guides
-
 - [Reentrancy](docs/reentrancy.md)
 - [tx.origin](docs/tx-origin.md)
 - [Access Control](docs/access-control.md)
 - [Front-Running](docs/front-running.md)
+
 
 ---
 
