@@ -1,3 +1,6 @@
+![CI](../../actions/workflows/ci.yml/badge.svg)
+![Wake](../../actions/workflows/wake.yml/badge.svg)
+
 # 🛡️ Solidity Security Lab
 
 Hands-on playground to learn, simulate, and fix real-world smart contract vulnerabilities.
@@ -100,6 +103,12 @@ All vulnerabilities are validated through automated Hardhat tests:
 - Exploit fails on secure implementation
 - State integrity is verified
 - Edge cases covered
+
+## Security Tooling
+- ✅ Unit tests (Hardhat)
+- ✅ CI (GitHub Actions)
+- ✅ Static analysis (Wake)
+Artifacts: Wake output is uploaded on every run.
 
 Run locally:
 
