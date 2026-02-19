@@ -34,6 +34,7 @@ Each module includes:
 - [Access Control](docs/access-control.md)
 - [Front-Running](docs/front-running.md)
 - Delegatecall Takeover (advanced)
+- `[Delegatecall Takeover](docs/delegatecall.md)`
 
 ---
 
